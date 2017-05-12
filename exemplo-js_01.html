@@ -3,9 +3,52 @@
   <head>
     <meta charset="utf-8">
     <title>Exemplo JS</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 
+    <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+
+    </script>
   </head>
   <body>
+
+   <h1>Exemplo de Validação com JS</h1>
+   <form  action="#" method="get"  onsubmit="return validaCampo(this)">
+       <fieldset>
+         <legend>LOGIN</legend>
+
+          <div>
+
+            <label for="iNuser">Nome de Usuario</label><br/>
+            <input type="text" name="tNuser" id="iNuser"
+            onfocus="validaCor(this)"><span id="iWarning1" onfocus="validaCor"></span>
+
+          </div>
+
+          <div>
+            <label for="iSenha">Senha</label><br/>
+            <input type="password" name="tSenha" id="iSenha" onfocus="validaCor(this)">
+            <span id="iWarning2" onfocus="validaCor"></span>
+          </div>
+
+            <div>
+               <label for="datepicker">Data Nascimento</label><br/>
+               <input type="text" name="tDtNasc" id="datepicker">
+            </div>
+
+          <div>
+            <input type="submit"  value="ENVIAR">
+          </div>
+
+       </fieldset>
+   </form>
+
 <!--
 <div onmouseover="alert('Alô JS!')">
   innerHTML
